@@ -42,7 +42,7 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
-    <Content Include="Microsoft\Reactive\Testing\README.txt" />
+    <Content Include="Microsoft\Reactive\Testing\MS\README.txt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\AssemblyInfoCommon.cs">
@@ -51,20 +51,20 @@
     <Compile Include="BuilderExtensions.cs" />
     <Compile Include="DebugAttribute.cs" />
     <Compile Include="IBuilder.cs" />
-    <Compile Include="Microsoft\Reactive\Testing\ColdObservable.cs" />
-    <Compile Include="Microsoft\Reactive\Testing\GlobalSuppressions.cs" />
-    <Compile Include="Microsoft\Reactive\Testing\HotObservable.cs" />
-    <Compile Include="Microsoft\Reactive\Testing\ITestObservable.cs" />
-    <Compile Include="Microsoft\Reactive\Testing\ITestObserver.cs" />
-    <Compile Include="Microsoft\Reactive\Testing\MockObserver.cs" />
-    <Compile Include="Microsoft\Reactive\Testing\ReactiveAssert.cs" />
-    <Compile Include="Microsoft\Reactive\Testing\ReactiveTest.cs" />
-    <Compile Include="Microsoft\Reactive\Testing\Recorded.cs" />
-    <Compile Include="Microsoft\Reactive\Testing\Subscription.cs" />
-    <Compile Include="Microsoft\Reactive\Testing\TestScheduler.cs" />
+    <Compile Include="Microsoft\Reactive\Testing\MS\ColdObservable.cs" />
+    <Compile Include="Microsoft\Reactive\Testing\MS\GlobalSuppressions.cs" />
+    <Compile Include="Microsoft\Reactive\Testing\MS\HotObservable.cs" />
+    <Compile Include="Microsoft\Reactive\Testing\MS\ITestObservable.cs" />
+    <Compile Include="Microsoft\Reactive\Testing\MS\ITestObserver.cs" />
+    <Compile Include="Microsoft\Reactive\Testing\MS\MockObserver.cs" />
+    <Compile Include="Microsoft\Reactive\Testing\MS\ReactiveAssert.cs" />
+    <Compile Include="Microsoft\Reactive\Testing\MS\ReactiveTest.cs" />
+    <Compile Include="Microsoft\Reactive\Testing\MS\Recorded.cs" />
+    <Compile Include="Microsoft\Reactive\Testing\MS\Subscription.cs" />
+    <Compile Include="Microsoft\Reactive\Testing\MS\TestScheduler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="System\StringExtensions.cs" />
-    <Compile Include="TestSchedulerExtensions.cs" />
+    <Compile Include="Microsoft\Reactive\Testing\TestSchedulerExtensions.cs" />
     <Compile Include="UseCultureAttribute.cs" />
   </ItemGroup>
   <ItemGroup>

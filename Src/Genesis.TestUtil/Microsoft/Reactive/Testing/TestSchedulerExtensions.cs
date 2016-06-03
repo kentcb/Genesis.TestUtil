@@ -1,8 +1,7 @@
-﻿namespace Genesis.TestUtil
+﻿namespace Microsoft.Reactive.Testing
 {
     using System;
     using System.Reactive.Concurrency;
-    using Microsoft.Reactive.Testing;
 
     public static class TestSchedulerExtensions
     {
