@@ -10,6 +10,12 @@
             "yyyy-MM-dd"
         };
 
+        private static readonly string[] supportedTimeSpanFormats = new[]
+        {
+            @"hh\:mm\:ss",
+            @"hh\:mm"
+        };
+
         public static DateTime? ToDateTime(this string @this)
         {
             if (@this == null)
@@ -25,6 +31,22 @@
                         CultureInfo.InvariantCulture,
                         DateTimeStyles.None),
                     DateTimeKind.Utc);
+        }
+
+        public static TimeSpan? ToTimeSpan(this string @this)
+        {
+            if (@this == null)
+            {
+                return null;
+            }
+
+            return
+                TimeSpan
+                    .ParseExact(
+                        @this,
+                        supportedTimeSpanFormats,
+                        CultureInfo.InvariantCulture,
+                        TimeSpanStyles.None);
         }
     }
 }
