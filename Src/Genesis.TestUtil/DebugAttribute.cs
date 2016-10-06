@@ -1,4 +1,4 @@
-﻿namespace Genesis.Util
+﻿namespace Genesis.TestUtil
 {
     using System;
     using System.Diagnostics;

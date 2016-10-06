@@ -1,4 +1,4 @@
-﻿namespace Genesis.Util
+﻿namespace Genesis.TestUtil
 {
     public interface IBuilder
     {
