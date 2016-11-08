@@ -12,6 +12,7 @@
 
         private static readonly string[] supportedTimeSpanFormats = new[]
         {
+            @"d\.hh\:mm\:ss",
             @"hh\:mm\:ss",
             @"hh\:mm"
         };
