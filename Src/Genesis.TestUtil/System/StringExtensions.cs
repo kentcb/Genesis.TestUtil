@@ -17,7 +17,7 @@
             @"hh\:mm"
         };
 
-        public static DateTime? ToDateTime(this string @this)
+        public static DateTime? ToDateTime(this string @this, DateTimeKind kind = DateTimeKind.Utc)
         {
             if (@this == null)
             {
@@ -31,7 +31,7 @@
                         supportedDateTimeFormats,
                         CultureInfo.InvariantCulture,
                         DateTimeStyles.None),
-                    DateTimeKind.Utc);
+                    kind);
         }
 
         public static TimeSpan? ToTimeSpan(this string @this)
