@@ -27,6 +27,13 @@
             @"d\.hh\:mm\:ss\.ff",
             @"d\.hh\:mm\:ss\.f",
             @"d\.hh\:mm\:ss",
+            @"hh\:mm\:ss\.fffffff",
+            @"hh\:mm\:ss\.ffffff",
+            @"hh\:mm\:ss\.fffff",
+            @"hh\:mm\:ss\.ffff",
+            @"hh\:mm\:ss\.fff",
+            @"hh\:mm\:ss\.ff",
+            @"hh\:mm\:ss\.f",
             @"hh\:mm\:ss",
             @"hh\:mm"
         };
