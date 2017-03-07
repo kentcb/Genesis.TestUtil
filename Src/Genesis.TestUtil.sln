@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genesis.TestUtil", "Genesis.TestUtil\Genesis.TestUtil.csproj", "{669C7433-AA90-4B09-BB5D-2B872233197E}"
 EndProject
@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".build", ".build", "{AA5779
 		..\build.bat = ..\build.bat
 		..\build.fsx = ..\build.fsx
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genesis.TestUtil.UnitTests", "Genesis.TestUtil.UnitTests\Genesis.TestUtil.UnitTests.csproj", "{A7107054-BBDE-44D3-AB9A-097C9022E1A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{669C7433-AA90-4B09-BB5D-2B872233197E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{669C7433-AA90-4B09-BB5D-2B872233197E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{669C7433-AA90-4B09-BB5D-2B872233197E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7107054-BBDE-44D3-AB9A-097C9022E1A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7107054-BBDE-44D3-AB9A-097C9022E1A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7107054-BBDE-44D3-AB9A-097C9022E1A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7107054-BBDE-44D3-AB9A-097C9022E1A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

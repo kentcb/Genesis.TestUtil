@@ -10,7 +10,7 @@ open Fake.Testing.XUnit2
 
 // properties
 let projectName = "Genesis.TestUtil"
-let semanticVersion = "1.0.9-alpha"
+let semanticVersion = "1.0.10-alpha"
 let version = (>=>) @"(?<major>\d*)\.(?<minor>\d*)\.(?<build>\d*).*?" "${major}.${minor}.${build}.0" semanticVersion
 let configuration = getBuildParamOrDefault "configuration" "Release"
 // can be set by passing: -ev deployToNuGet true
@@ -75,6 +75,14 @@ Target "Build" (fun _ ->
         (srcDir @@ projectName + ".sln")
 )
 
+Target "ExecuteUnitTests" (fun _ ->
+    xUnit2 (fun p ->
+        { p with
+            ShadowCopy = false;
+        })
+        [srcDir @@ projectName + ".UnitTests/bin" @@ configuration @@ projectName + ".UnitTests.dll"]
+)
+
 Target "CreateArchives" (fun _ ->
     // source archive
     !! "**/*.*"
@@ -137,6 +145,7 @@ Target "CreateNuGetPackages" (fun _ ->
 "Clean"
     ==> "RestorePackages"
     ==> "Build"
+    ==> "ExecuteUnitTests"
     ==> "CreateArchives"
     ==> "CreateNuGetPackages"
 

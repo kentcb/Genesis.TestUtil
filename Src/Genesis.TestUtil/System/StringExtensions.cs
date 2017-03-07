@@ -27,6 +27,7 @@
             @"d\.hh\:mm\:ss\.ff",
             @"d\.hh\:mm\:ss\.f",
             @"d\.hh\:mm\:ss",
+            @"d\.hh\:mm",
             @"hh\:mm\:ss\.fffffff",
             @"hh\:mm\:ss\.ffffff",
             @"hh\:mm\:ss\.fffff",
@@ -38,14 +39,14 @@
             @"hh\:mm"
         };
 
-        public static DateTime? ToDateTime(this string @this, DateTimeKind kind = DateTimeKind.Utc)
+        public static DateTime? ToDateTime(this string @this, DateTimeKind kind = DateTimeKind.Utc, DateTimeKind targetKind = DateTimeKind.Unspecified)
         {
             if (@this == null)
             {
                 return null;
             }
 
-            return
+            var result =
                 DateTime.SpecifyKind(
                     DateTime.ParseExact(
                         @this,
@@ -53,6 +54,18 @@
                         CultureInfo.InvariantCulture,
                         DateTimeStyles.None),
                     kind);
+
+            switch (targetKind)
+            {
+                case DateTimeKind.Local:
+                    result = result.ToLocalTime();
+                    break;
+                case DateTimeKind.Utc:
+                    result = result.ToUniversalTime();
+                    break;
+            }
+
+            return result;
         }
 
         public static TimeSpan? ToTimeSpan(this string @this)
